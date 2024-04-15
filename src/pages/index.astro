@@ -2,7 +2,9 @@
 import PhoneBg from "../components/IntroComp/PhoneBg.astro";
 import Pin from "../components/IntroComp/Pin.astro";
 import Layout from "../layouts/Layout.astro";
-import SocialIcons from "../components/IntroComp/SocialIcons.astro";
+import GithubSocial from "../components/IntroComp/GithubSocial.astro";
+import LinkedinSocial from "../components/IntroComp/LinkedinSocial.astro";
+import HackerankSocial from "../components/IntroComp/HackerankSocial.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -29,11 +31,9 @@ import SocialIcons from "../components/IntroComp/SocialIcons.astro";
 			font-family: "Montserrat-Light";
 		}
 	</style>
-	<section
-		class="max-w-[1400px] border border-white mt-20 m-auto flex justify-between"
-	>
+	<section class="max-w-[1400px] py-36 m-auto h-fit flex justify-between">
 		<div class="flex flex-col justify-between">
-			<div>
+			<div class="">
 				<h1 id="title" class="text-[90px] font-black text-white">
 					Bruno Amat,
 				</h1>
@@ -41,12 +41,20 @@ import SocialIcons from "../components/IntroComp/SocialIcons.astro";
 					full stack developer.
 				</h1>
 				<div class="mt-5 flex justify-start items-center gap-3">
-					<a href="" download="" class="bg-[#FF4667] text-white text-sm px-5 py-1 rounded-full">
+					<a
+						href=""
+						download=""
+						class="bg-[#FF4667] text-white text-sm px-5 py-1 rounded-full"
+					>
 						<button type="button">Download CV</button>
 					</a>
-					<SocialIcons icon="/icons/github.svg" url="" />
-					<SocialIcons icon="/icons/linkedin.svg" url="" />
-					<SocialIcons icon="/icons/hackerank.svg" url="" />
+					<GithubSocial url="https://github.com/amatbruno" />
+					<LinkedinSocial
+						url="https://www.linkedin.com/in/mebruno/"
+					/>
+					<HackerankSocial
+						url="https://www.hackerrank.com/profile/amattbruno"
+					/>
 				</div>
 			</div>
 
@@ -63,8 +71,14 @@ import SocialIcons from "../components/IntroComp/SocialIcons.astro";
 				/>
 			</div>
 		</div>
-		<div class="h-auto">
+
+		<div class="h-fit flex justify-center">
+			<div class="absolute  bg-gray-300 text-gray-300 w-32 h-7 rounded-lg">.</div>
 			<PhoneBg />
 		</div>
+	</section>
+
+	<section class="max-w-[1400px] m-auto">
+		hola
 	</section>
 </Layout>
