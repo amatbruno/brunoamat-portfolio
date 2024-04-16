@@ -5,6 +5,8 @@ import Layout from "../layouts/Layout.astro";
 import GithubSocial from "../components/IntroComp/GithubSocial.astro";
 import LinkedinSocial from "../components/IntroComp/LinkedinSocial.astro";
 import HackerankSocial from "../components/IntroComp/HackerankSocial.astro";
+import ExperienceCard from "../components/ExpComp/ExperienceCard.astro";
+import experience from "../data/experience.json";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -29,6 +31,9 @@ import HackerankSocial from "../components/IntroComp/HackerankSocial.astro";
 		}
 		a {
 			font-family: "Montserrat-Light";
+		}
+		#exp-title {
+			font-family: "Montserrat-Bold";
 		}
 	</style>
 	<section class="max-w-[1400px] py-36 m-auto h-fit flex justify-between">
@@ -73,12 +78,33 @@ import HackerankSocial from "../components/IntroComp/HackerankSocial.astro";
 		</div>
 
 		<div class="h-fit flex justify-center">
-			<div class="absolute bg-gray-300 text-gray-300 w-32 h-7 rounded-lg">.</div>
+			<div class="absolute bg-gray-300 text-gray-300 w-32 h-7 rounded-lg">
+				.
+			</div>
 			<PhoneBg />
 		</div>
 	</section>
 
 	<section class="max-w-[1400px] m-auto">
-		hola
+		<h1 id="exp-title" class="text-white text-2xl tracking-wide mb-5">
+			Professional Experience
+		</h1>
+		<div>
+			<ol class="items-start justify-center sm:flex">
+				{
+					experience.map((el) => (
+						<ExperienceCard
+							role={el.role}
+							date={el.duration}
+							contract={el.contract}
+						/>
+					))
+				}
+			</ol>
+		</div>
+	</section>
+
+	<section>
+		
 	</section>
 </Layout>

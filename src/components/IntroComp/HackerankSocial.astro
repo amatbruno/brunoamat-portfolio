@@ -5,6 +5,11 @@ const { url } = Astro.props;
 <style>
     a:hover svg {
         fill: white !important;
+        transition: all 0.3s;
+    }
+
+    svg {
+        transition: all 0.3s;
     }
 </style>
 <a href={url} target="_blank"

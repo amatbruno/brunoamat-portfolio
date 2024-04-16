@@ -1,0 +1,43 @@
+---
+const { role, date, contract } = Astro.props;
+---
+
+<style>
+    @font-face {
+        font-family: "Montserrat-Bold";
+        src: url("/fonts/Montserrat-Bold.ttf");
+    }
+    @font-face {
+        font-family: "Montserrat-Medium";
+        src: url("/fonts/Montserrat-Medium.ttf");
+    }
+    h3 {
+        font-family: "Montserrat-Bold";
+    }
+    p,
+    time {
+        font-family: "Montserrat-Medium";
+    }
+</style>
+
+<li class="relative mb-6 sm:mb-0 mt-5">
+    <div class="flex items-center">
+        <div
+            class="z-10 flex items-center justify-center w-4 h-4 rounded-full dark:bg-white"
+        >
+        </div>
+        <div class="hidden sm:flex w-full bg-gray-200 h-0.5"></div>
+    </div>
+    <div class="mt-5 sm:pe-8">
+        <h3 class="text-lg mb-3 w-64 text-gray-900 dark:text-white">
+            {role}
+        </h3>
+        <time
+            class="block text-sm leading-none text-gray-400 dark:text-gray-400"
+            >{date}</time
+        >
+        <p class="text-sm mt-1 text-gray-400 dark:text-gray-400">
+            {contract}
+        </p>
+    </div>
+</li>
