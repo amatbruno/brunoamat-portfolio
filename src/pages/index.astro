@@ -7,6 +7,8 @@ import LinkedinSocial from "../components/IntroComp/LinkedinSocial.astro";
 import HackerankSocial from "../components/IntroComp/HackerankSocial.astro";
 import ExperienceCard from "../components/ExpComp/ExperienceCard.astro";
 import experience from "../data/experience.json";
+import MobileComponent from "../components/ProjectsComp/MobileProject.astro";
+import DesktopProject from "../components/ProjectsComp/DesktopProject.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -36,7 +38,7 @@ import experience from "../data/experience.json";
 			font-family: "Montserrat-Bold";
 		}
 	</style>
-	<section class="max-w-[1400px] py-36 m-auto h-fit flex justify-between">
+	<section class="max-w-[1400px] my-36 m-auto h-fit flex justify-between">
 		<div class="flex flex-col justify-between">
 			<div class="">
 				<h1 id="title" class="text-[90px] font-black text-white">
@@ -104,7 +106,21 @@ import experience from "../data/experience.json";
 		</div>
 	</section>
 
-	<section>
-		
+	<section class="max-w-[1400px] m-auto my-24">
+		<h1 id="exp-title" class="text-white text-2xl tracking-wide mb-5">
+			Projects Overview
+		</h1>
+		<div class="mt-10 flex flex-wrap gap-[99px]">
+			<MobileComponent
+				url="/assets/images/bitmap-project-test.webp"
+				title="Ejemplo"
+				desc="Ejemplo"
+			/>
+			<DesktopProject
+				url="/assets/images/bitmap-project-test.webp"
+				title="Ejemplo"
+				desc="Ejemplo"
+			/>
+		</div>
 	</section>
 </Layout>
