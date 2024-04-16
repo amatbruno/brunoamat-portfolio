@@ -26,8 +26,21 @@ const { url, title, desc } = Astro.props;
     }
 </style>
 <div class="flex flex-col">
-    <div class="project-mobile w-[500px] h-fit rounded-[50px]">
-        <img width="225" class="rounded-[35px] m-auto py-28" src={url} />
+    <div class="project-mobile w-[500px] py-28 rounded-[50px]">
+        <video
+            class="rounded-[30px] m-auto"
+            autoplay
+            loop
+            playsinline
+            muted
+            width="225"
+        >
+            <source
+                src={url}
+                type="video/mp4"
+            />
+            Your browser does not support the video tag.
+        </video>
     </div>
     <div class="flex mt-5 justify-start items-center gap-3">
         <h1 class="text-white">{title}</h1>
