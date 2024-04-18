@@ -1,0 +1,38 @@
+[
+    {
+        "logo" : "/icons/android.svg",
+        "tech" : "Android"
+    },
+    {
+        "logo" : "/icons/docker.svg",
+        "tech" : "Docker"
+    },
+    {
+        "logo" : "/icons/git.svg",
+        "tech" : "Git"
+    },
+    {
+        "logo" : "/icons/github.svg",
+        "tech" : "GitHub"
+    },
+    {
+        "logo" : "/icons/linux.svg",
+        "tech" : "Linux"
+    },
+    {
+        "logo" : "/icons/prisma.svg",
+        "tech" : "Prisma"
+    },
+    {
+        "logo" : "/icons/postman.svg",
+        "tech" : "Postman"
+    },
+    {
+        "logo" : "/icons/vercel.svg",
+        "tech" : "Vercel"
+    },
+    {
+        "logo" : "/icons/figma.svg",
+        "tech" : "Figma"
+    }
+]

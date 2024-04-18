@@ -1,0 +1,30 @@
+[
+    {
+        "logo" : "/icons/html.svg",
+        "tech" : "HTML"
+    },
+    {
+        "logo" : "/icons/css.svg",
+        "tech" : "CSS"
+    },
+    {
+        "logo" : "/icons/javascript.svg",
+        "tech" : "JavaScript"
+    },
+    {
+        "logo" : "/icons/tailwind.svg",
+        "tech" : "TailwindCSS"
+    },
+    {
+        "logo" : "/icons/react.svg",
+        "tech" : "React.js"
+    },
+    {
+        "logo" : "/icons/next.svg",
+        "tech" : "Next.js"
+    },
+    {
+        "logo" : "/icons/angular.svg",
+        "tech" : "Angular"
+    }
+]

@@ -1,0 +1,8 @@
+---
+const { name, svg } = Astro.props;
+---
+
+<div class="bg-black hover:bg-[#131313] hover:transition-all transition-all mt-4 rounded-full px-5 py-1 text-white w-fit flex justify-start border border-gray-400 items-center gap-2">
+    <img width="16" src={svg} alt={name}>
+    <h2 class="text-sm font-light">{name}</h2>
+</div>

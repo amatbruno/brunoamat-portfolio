@@ -9,6 +9,12 @@ import ExperienceCard from "../components/ExpComp/ExperienceCard.astro";
 import experience from "../data/experience.json";
 import MobileComponent from "../components/ProjectsComp/MobileProject.astro";
 import DesktopProject from "../components/ProjectsComp/DesktopProject.astro";
+import TechBadge from "../components/ProjectsComp/TechBadge.astro";
+import frontend from "../data/frontend.json";
+import backend from "../data/backend.json";
+import tools from "../data/tools.json";
+import databases from "../data/databases.json";
+import TechIcon from "../components/TechStackComp/TechIcon.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -49,6 +55,12 @@ import DesktopProject from "../components/ProjectsComp/DesktopProject.astro";
 		}
 		.project-desktop-2 {
 			background: linear-gradient(to left top, #cfb612, #00bbbb);
+		}
+		.tech-title {
+			background: rgb(107 114 128);
+		}
+		.tech-container:hover .tech-title {
+			background: white;
 		}
 	</style>
 
@@ -147,6 +159,10 @@ import DesktopProject from "../components/ProjectsComp/DesktopProject.astro";
 						Android app that finds the bitmap position from an image
 					</h3>
 				</div>
+				<div class="flex gap-3">
+					<TechBadge name="Java" svg="/icons/java.svg" />
+					<TechBadge name="Android" svg="/icons/android.svg" />
+				</div>
 			</article>
 
 			<article>
@@ -168,6 +184,11 @@ import DesktopProject from "../components/ProjectsComp/DesktopProject.astro";
 						Professional blog webpage with for create and manage
 						content with different user roles.
 					</h3>
+				</div>
+				<div class="flex gap-3">
+					<TechBadge name="Laravel" svg="/icons/laravel.svg" />
+					<TechBadge name="Tailwind CSS" svg="/icons/tailwind.svg" />
+					<TechBadge name="MySQL" svg="/icons/mysql.svg" />
 				</div>
 			</article>
 
@@ -191,7 +212,93 @@ import DesktopProject from "../components/ProjectsComp/DesktopProject.astro";
 						allows you draw and play with friends.
 					</h3>
 				</div>
+				<div class="flex gap-3">
+					<TechBadge name="HTML" svg="/icons/html.svg" />
+					<TechBadge name="CSS" svg="/icons/css.svg" />
+					<TechBadge name="JavaScript" svg="/icons/javascript.svg" />
+					<TechBadge name="Node" svg="/icons/node.svg" />
+				</div>
 			</article>
+		</div>
+	</section>
+
+	<section class="max-w-[1400px] m-auto pb-5">
+		<h1 id="exp-title" class="text-white text-2xl tracking-wide mb-5">
+			Tech Stack
+		</h1>
+		<div class="grid grid-cols-2 gap-16">
+			<div
+				class="tech-container border-2 border-gray-500 hover:border-white transition-all rounded-3xl p-5"
+			>
+				<h1
+					class="tech-title text-center m-auto font-[Montserrat-Bold] text-lg my-7 py-1 px-5 w-52 text-black rounded-full"
+				>
+					Frontend
+				</h1>
+				<div class="flex flex-wrap gap-10 justify-center items-center">
+					{
+						frontend.map((front) => (
+							<TechIcon icon={front.logo} name={front.tech} />
+						))
+					}
+				</div>
+			</div>
+
+			<div
+				class="tech-container border-2 border-gray-500 hover:border-white transition-all rounded-3xl p-5"
+			>
+				<h1
+					class="tech-title text-center m-auto font-[Montserrat-Bold] text-lg my-7 py-1 px-5 w-52 text-black rounded-full"
+				>
+					Backend
+				</h1>
+				<div
+					class="flex flex-wrap gap-10 justify-center items-center p-3"
+				>
+					{
+						backend.map((back) => (
+							<TechIcon icon={back.logo} name={back.tech} />
+						))
+					}
+				</div>
+			</div>
+
+			<div
+				class="tech-container border-2 border-gray-500 hover:border-white transition-all rounded-3xl p-5"
+			>
+				<h1
+					class="tech-title text-center m-auto font-[Montserrat-Bold] text-lg my-7 py-1 px-5 w-52 text-black rounded-full"
+				>
+					Tools & Software
+				</h1>
+				<div class="flex flex-wrap gap-10 justify-center items-center">
+					{
+						tools.map((tool) => (
+							<TechIcon icon={tool.logo} name={tool.tech} />
+						))
+					}
+				</div>
+			</div>
+
+			<div
+				class="tech-container border-2 border-gray-500 hover:border-white transition-all rounded-3xl p-5"
+			>
+				<h1
+					class="tech-title text-center m-auto font-[Montserrat-Bold] text-lg my-7 py-1 px-5 w-52 text-black rounded-full"
+				>
+					Databases
+				</h1>
+				<div class="flex flex-wrap gap-10 justify-center items-center">
+					{
+						databases.map((database) => (
+							<TechIcon
+								icon={database.logo}
+								name={database.tech}
+							/>
+						))
+					}
+				</div>
+			</div>
 		</div>
 	</section>
 </Layout>

@@ -1,0 +1,17 @@
+---
+const { icon, name } = Astro.props;
+---
+
+<style>
+    @font-face {
+        font-family: "Montserrat-Bold";
+        src: url("/fonts/Montserrat-Bold.ttf");
+    }
+</style>
+
+<article
+    class="flex flex-col gap-5 justify-between items-center h-[150px]"
+>
+    <img class="hover:translate-y-[-10px] transition-all" width="85" src={icon} alt={name} />
+    <h1 class="text-white font-[Montserrat-Bold]">{name}</h1>
+</article>

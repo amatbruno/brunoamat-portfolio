@@ -1,0 +1,22 @@
+[
+    {
+        "logo" : "/icons/mysql.svg",
+        "tech" : "MySQL"
+    },
+    {
+        "logo" : "/icons/mariadb.svg",
+        "tech" : "MariaDB"
+    },
+    {
+        "logo" : "/icons/mongodb.svg",
+        "tech" : "MongoDB"
+    },
+    {
+        "logo" : "/icons/postgre.svg",
+        "tech" : "PostgreSQL"
+    },
+    {
+        "logo" : "/icons/sqlite.svg",
+        "tech" : "SQLite"
+    }
+]
