@@ -65,12 +65,16 @@ import TechIcon from "../components/TechStackComp/TechIcon.astro";
 			transition: all;
 		}
 
-		@media (max-width: 1400px) {
+		@media (min-width: 1000px) and (max-width: 1400px) {
 			#intro-container {
 				width: 1000px;
 			}
 			#exp-container {
 				width: 1000px;
+			}
+			#exp-list {
+				display: flex;
+				
 			}
 			#projects-container {
 				width: 1000px;
@@ -92,21 +96,33 @@ import TechIcon from "../components/TechStackComp/TechIcon.astro";
 			}
 		}
 
-		@media (max-width: 1000px) {
+		@media (min-width: 600px) and (max-width: 1000px) {
 			#intro-container {
+				display: flex;
 				width: 600px;
+				gap: 10px;
 			}
 			#title {
-				font-size: 50px;
+				font-size: 40px;
 			}
 			#subtitle {
 				font-size: 35px;
 			}
+			#cv-btn {
+				font-size: 5px;
+				padding: 1px;
+			}
 			#pins {
-				gap: 5px;
+				gap: 10px;
 			}
 			#exp-container {
 				width: 600px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			#exp-list {
 				display: flex;
 				flex-direction: column;
 			}
@@ -115,6 +131,7 @@ import TechIcon from "../components/TechStackComp/TechIcon.astro";
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
+				align-items: center;
 			}
 			.project-desktop {
 				width: 600px;
@@ -134,22 +151,20 @@ import TechIcon from "../components/TechStackComp/TechIcon.astro";
 			}
 		}
 
-		@media (min-width: 600px ) and (max-width: 999px ) {
+		@media (max-width: 600px) {
 			#intro-container {
 				display: flex;
+				width: 400px;
+				gap: 10px;
 			}
 			#title {
-				font-size: 40px;
+				font-size: 30px;
 			}
 			#subtitle {
-				font-size: 35px;
-			}
-			#cv-btn {
-				font-size: 5px;
-				padding: 1px;
+				font-size: 25px;
 			}
 			#pins {
-				gap: 10px;
+				gap: 7px;
 			}
 			#exp-container {
 				width: 400px;
@@ -157,6 +172,10 @@ import TechIcon from "../components/TechStackComp/TechIcon.astro";
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
+			}
+			#exp-list {
+				display: flex;
+				flex-direction: column;
 			}
 			#projects-container {
 				width: 400px;
@@ -196,7 +215,10 @@ import TechIcon from "../components/TechStackComp/TechIcon.astro";
 				<h1 id="subtitle" class="text-[75px] text-white">
 					full stack developer.
 				</h1>
-				<div id="cv-btn" class="mt-5 flex justify-start items-center gap-3">
+				<div
+					id="cv-btn"
+					class="mt-5 flex justify-start items-center gap-3"
+				>
 					<a
 						href=""
 						download=""
@@ -243,7 +265,7 @@ import TechIcon from "../components/TechStackComp/TechIcon.astro";
 			Professional Experience
 		</h1>
 		<div>
-			<ol class="items-start justify-center sm:flex">
+			<ol id="exp-list" class="items-start justify-center flex">
 				{
 					experience.map((el) => (
 						<ExperienceCard
