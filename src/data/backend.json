@@ -8,15 +8,7 @@
         "tech" : "laravel"
     },
     {
-        "logo" : "/icons/python.svg",
-        "tech" : "Python"
-    },
-    {
         "logo" : "/icons/csharp.svg",
         "tech" : "C#"
-    },
-    {
-        "logo" : "/icons/node.svg",
-        "tech" : "Node.js"
     }
 ]

@@ -1,11 +1,7 @@
 [
     {
-        "logo" : "/icons/android.svg",
-        "tech" : "Android"
-    },
-    {
-        "logo" : "/icons/docker.svg",
-        "tech" : "Docker"
+        "logo" : "/icons/microsoft365.svg",
+        "tech" : "Microsoft 365"
     },
     {
         "logo" : "/icons/git.svg",
@@ -28,11 +24,11 @@
         "tech" : "Postman"
     },
     {
-        "logo" : "/icons/vercel.svg",
-        "tech" : "Vercel"
-    },
-    {
         "logo" : "/icons/figma.svg",
         "tech" : "Figma"
+    },
+    {
+        "logo" : "/icons/spline.png",
+        "tech" : "Spline"
     }
 ]
